@@ -51,8 +51,9 @@ const NavBar = () => {
             </NavLink>
           </div>
 
-          <NavLink to="/login" className="btn btn-outline-primary px-3">Login</NavLink>
-          <NavLink to="/registration" className="btn btn-outline-primary px-3 mr-4 ml-4">SingUp</NavLink>
+          <NavLink to="/login" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded no-underline px-3">Login</NavLink>
+          <NavLink to="/registration" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded px-3 mr-4 ml-4 no-underline">SingUp</NavLink>
+          <NavLink to="/cartpage" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded px-3 mr-4 ml-4 no-underline">Cart</NavLink>
           <form className="d-flex">
             <input
               className="form-control me-2"
