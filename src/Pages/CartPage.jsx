@@ -1,10 +1,11 @@
 import React from 'react'
+import Layout from "../Components/Layout"
 
 const CartPage = () => {
   return (
-    <div>
+    <Layout>
       <h1>Cart Page</h1>
-      </div>
+      </Layout>
   )
 }
 

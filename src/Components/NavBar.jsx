@@ -8,7 +8,7 @@ const NavBar = () => {
     <>
       <nav className="flex items-center justify-between flex-wrap bg-teal-500 p-3">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
-          <NavLink to="/" className=" text-3xl tracking-tight no-underline font-bold mt-3 border divide-gray-700 > * border-solid rounded-full text-indigo p-3">Firbase</NavLink>
+          <NavLink to="/" className="shadow text-3xl tracking-tight no-underline font-bold mt-3 border divide-gray-700 > * border-solid rounded-full text-indigo p-3">Firbase</NavLink>
         </div>
         <div className="block lg:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
@@ -26,19 +26,19 @@ const NavBar = () => {
           <div className="text-sm lg:flex-grow">
             <NavLink
               to="/"
-              className="block mt-3  lg:inline-block lg:mt-0 text-teal-200 text-white mr-4 text-4xl no-underline"
+              className="block mt-3 shadow lg:inline-block lg:mt-0 text-teal-200 text-white mr-4 text-4xl no-underline"
             >
               Home
             </NavLink>
             <NavLink
               to="/product"
-              className="block mt-3 lg:inline-block lg:mt-0 text-teal-200 text-white mr-4 text-4xl no-underline"
+              className="block mt-3 shadow lg:inline-block lg:mt-0 text-teal-200 text-white mr-4 text-4xl no-underline"
             >
               Product
             </NavLink>
             <NavLink
               to="/contact"
-              className="block mt-3 lg:inline-block lg:mt-0 text-teal-200 text-white hover:text-blue-300 text-4xl no-underline"
+              className="block mt-3 shadow lg:inline-block lg:mt-0 text-teal-200 text-white hover:text-blue-300 text-4xl no-underline"
             >
               Contact Us
             </NavLink>
