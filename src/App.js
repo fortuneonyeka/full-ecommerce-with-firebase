@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import NavBar from "./Pages/NavBar";
+import 'font-awesome/css/font-awesome.min.css';
+import NavBar from "./Components/NavBar";
 import HomePage from "./Pages/HomePage";
 import ProductPage from "./Pages/ProductPage";
 import CartPage from "./Pages/CartPage";
