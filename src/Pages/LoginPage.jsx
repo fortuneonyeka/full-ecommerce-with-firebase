@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-bootstrap";
 
 const LoginPage = () => {
   return (
@@ -40,12 +41,12 @@ const LoginPage = () => {
           >
             Sign In
           </button>
-          <a
+          <NavLink
             className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            href="#"
+            to="#"
           >
             Forgot Password?
-          </a>
+          </NavLink>
         </div>
       </form>
       <p className="text-center text-gray-500 text-xs">

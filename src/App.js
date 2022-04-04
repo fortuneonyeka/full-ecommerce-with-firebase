@@ -8,6 +8,7 @@ import CartPage from "./Pages/CartPage";
 import Registration from './Pages/Registration'
 import LoginPage from "./Pages/LoginPage"
 
+
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
         <Route path="/product" exact element={<ProductPage /> }/>
         <Route path="/cartpage" exact element={<CartPage /> }/>
         <Route path="/registration" exact element={<Registration /> }/>
+        
         <Route path="/login" exact element={<LoginPage /> }/>
       </Routes>
       </BrowserRouter>

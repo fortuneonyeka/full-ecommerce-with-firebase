@@ -43,7 +43,7 @@ const NavBar = () => {
               Contact Us
             </NavLink>
           </div>
-          
+         
           <NavLink to="/login" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  rounded no-underline px-3 mr-3">  <span className="fa fa-sign-in me-1"></span>Login</NavLink>
           <NavLink to="/registration" className="block mt-4 lg:inline-block lg:mt-0 text-teal-200 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  rounded px-3  no-underline mr-3"><span className="fa fa-user-plus me-1"></span>SingUp</NavLink>
           <CartBtn />
