@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <div>
       
-      <footer className="p-4 bg-teal-500 rounded-lg shadow md:flex md:items-center md:justify-between md:p-6 footer">
+      <footer className=" bg-pink-400 rounded-lg shadow md:flex md:items-center md:justify-between footer">
         <span className="text-sm text-gray-500 sm:text-center dark:text-white text-2xl">
           © 2022{" "}
           <a
