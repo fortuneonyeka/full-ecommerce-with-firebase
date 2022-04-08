@@ -7,6 +7,7 @@ import CartPage from "./Pages/CartPage";
 import Registration from './Pages/Registration'
 import LoginPage from "./Pages/LoginPage"
 import Contact from "./Pages/Contact";
+import "./Stlysheet/product.css"
 
 
 
