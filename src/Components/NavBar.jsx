@@ -7,7 +7,7 @@ import CartBtn from "./Buttons/CartBtn";
 const NavBar = () => {
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap bg-pink-400 header">
+      <nav className="flex items-center justify-between flex-wrap bg-pink-400 header ">
         <div className="flex items-center flex-shrink-0 text-white mr-6">
           <NavLink to="/" className="shadow text-3xl tracking-tight no-underline font-bold mb-3 border divide-gray-700 > * border-solid rounded-full text-indigo p-2">Firbase</NavLink>
         </div>
