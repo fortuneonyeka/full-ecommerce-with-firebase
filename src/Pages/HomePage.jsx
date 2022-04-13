@@ -62,10 +62,10 @@ const HomePage = () => {
             <div className="text-center">
             <img className="h-auto"  src={product.imageURL} alt="product photo" /> <hr />
             </div>
-            <p className="text-center lg:text-base">NAME: {product.name} </p> <hr />
-            <p className="text-center lg:text-base">PRICE: ${product.price}</p> <hr />
-            <p className="text-center lg:text-base">CATEGORY: {product.category}</p> <hr />
-            <p className="text-center lg:text-base ">DESCRIPTION: {product.description}</p>
+            <p className="text-center ">NAME: {product.name} </p> <hr />
+            <p className="text-center">PRICE: ${product.price}</p> <hr />
+            {/* <p className="text-center lg:text-base">CATEGORY: {product.category}</p> <hr /> */}
+            {/* <p className="text-center lg:text-base ">DESCRIPTION: {product.description}</p> */}
             </li>
           ))}
           </ul>
