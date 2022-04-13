@@ -7,8 +7,8 @@ import CartBtn from "./Buttons/CartBtn";
 const NavBar = () => {
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap bg-pink-400 header ">
-        <div className="flex items-center flex-shrink-0 text-white mr-6">
+      <nav className="flex items-center justify-between flex-wrap bg-pink-400 header rounded-lg px-3">
+        <div className="flex items-center flex-shrink-2 text-white mr-6">
           <NavLink to="/" className="shadow text-3xl tracking-tight no-underline font-bold mb-3 border divide-gray-700 > * border-solid rounded-full text-indigo p-2">Firbase</NavLink>
         </div>
         <div className="block lg:hidden">
@@ -27,19 +27,19 @@ const NavBar = () => {
           <div className="text-sm lg:flex-grow">
             <NavLink
               to="/"
-              className="block lg:inline-block lg:mt-0 text-teal-200 text-white mr-4 text-3xl no-underline"
+              className="block lg:inline-block  text-teal-200 text-white mr-4 text-3xl no-underline hover:underline"
             >
               Home
             </NavLink>
             <NavLink
               to="/product"
-              className="block lg:inline-block lg:mt-0 text-teal-200 text-white mr-4 text-3xl no-underline"
+              className="block lg:inline-block  text-teal-200 text-white mr-4 text-3xl no-underline hover:underline"
             >
               Product
             </NavLink>
             <NavLink
               to="/contact"
-              className="block lg:inline-block lg:mt-0 text-teal-200 text-white hover:text-blue-300 text-3xl no-underline"
+              className="block lg:inline-block  text-teal-200 text-white hover:text-blue-300 text-3xl no-underline hover:underline"
             >
               Contact Us
             </NavLink>
