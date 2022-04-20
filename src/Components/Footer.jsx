@@ -11,7 +11,7 @@ const Footer = () => {
           © 2022{" "}
           <a
             href="https://www.linkedin.com/in/fortunatus-ihedoro/"
-            target="_blank"
+            target="_blank" rel="noreferrer"
             className="hover:underline text-white no-underline"
           >
             Fortune™
@@ -30,7 +30,7 @@ const Footer = () => {
           <li>
             <a
               href="https://www.linkedin.com/in/fortunatus-ihedoro/"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className="mr-4 hover:underline md:mr-6 text-2xl"
             >
               <span>
@@ -41,7 +41,7 @@ const Footer = () => {
           <li>
             <a
               href="https://github.com/fortuneonyeka/full-ecommerce-with-firebase"
-              target="_blank"
+              target="_blank" rel="noreferrer"
               className="mr-4 hover:underline md:mr-6 text-2xl "
             >
               <span>
