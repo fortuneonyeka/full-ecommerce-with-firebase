@@ -23,7 +23,7 @@ const NavBar = () => {
             </svg>
           </button>
         </div>
-        <div className="w-full block flex-grow lg:flex lg:items-center lg:w-auto ml-9">
+        <div className=" hidden w-full block flex-grow lg:flex lg:items-center lg:w-auto ml-9">
           <div className="text-sm lg:flex-grow">
             <NavLink
               to="/"
@@ -31,12 +31,12 @@ const NavBar = () => {
             >
               Home
             </NavLink>
-            <NavLink
-              to="/product"
+            {/* <NavLink
+              to="/details"
               className="block lg:inline-block  text-teal-200 text-white mr-4 text-3xl no-underline hover:underline"
             >
               Product
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to="/contact"
               className="block lg:inline-block  text-teal-200 text-white hover:text-blue-300 text-3xl no-underline hover:underline"
