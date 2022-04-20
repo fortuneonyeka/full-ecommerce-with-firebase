@@ -1,14 +1,21 @@
 import React from "react";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import Layout from "../Components/Layout";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, getDocs } from "firebase/firestore";
 import fireDB from "../fireConfig";
 // import { fireproducts } from "../products/Fireproducts";
-import { useEffect } from "react";
+// import { useEffect } from "react";
+import Details from "./Details";
 
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null)
+
+  const closeModal = () => {
+    setSelectedProduct(null)
+  }
+
 
   const getData = async () => {
     try {
@@ -45,7 +52,7 @@ const HomePage = () => {
   return (
     <Layout>
       <div>
-      {/* {selectedVehicle && <Details  vehicle={selectedVehicle} closeModalProp={()=>closeModal()}/> } */}
+      {selectedProduct && <Details  productDetails={selectedProduct} closeModalProp={()=>closeModal()}/> }
      
       {products.length > 0 && (
        
@@ -58,9 +65,9 @@ const HomePage = () => {
           </div>
           <ul className="grid grid-cols-4 ">
           {products.map(product => (
-            <li key={products.id} className=" rounded shadow-lg m-2 p-4 hover:bg-pink-400 hover:text-white hover:italic transform motion-safe:hover:scale-95"> 
+            <li key={product.id} onClick={()=>setSelectedProduct(product)} className=" rounded shadow-lg m-2 p-4 hover:bg-pink-400 hover:text-white hover:italic transform motion-safe:hover:scale-95  "> 
             <div className="text-center">
-            <img className="h-auto"  src={product.imageURL} alt="product photo" /> <hr />
+            <img className="h-auto"  src={product.imageURL} alt="product" /> <hr />
             </div>
             <p className="text-center ">NAME: {product.name} </p> <hr />
             <p className="text-center">PRICE: ${product.price}</p> <hr />
