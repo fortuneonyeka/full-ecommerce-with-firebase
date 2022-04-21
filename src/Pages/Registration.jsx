@@ -4,7 +4,7 @@ import Layout from "../Components/Layout"
 const Registration = () => {
   return (
     <Layout >
-      <div className="w-full max-w-sm flex mx-auto">
+      <div className="w-full max-w-sm flex mx-auto my-64">
 
       
   <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-5">
