@@ -7,9 +7,9 @@ import CartBtn from "./Buttons/CartBtn";
 const NavBar = () => {
   return (
     <>
-      <nav className="flex items-center justify-between flex-wrap bg-pink-400 header rounded-lg px-3">
+      <nav className="flex items-center justify-between flex-wrap bg-purple-600 header rounded-lg px-3">
         <div className="flex items-center flex-shrink-2 text-white mr-6">
-          <NavLink to="/" className="shadow text-3xl tracking-tight no-underline font-bold mb-3 border divide-gray-700 > * border-solid rounded-full text-indigo p-2">Firbase</NavLink>
+          <NavLink to="/" className="shadow text-3xl tracking-tight no-underline font-bold mb-3 border divide-gray-700 > * border-solid rounded-full text-white p-2">Firbase</NavLink>
         </div>
         <div className="block lg:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">
@@ -45,10 +45,10 @@ const NavBar = () => {
             </NavLink>
           </div>
          
-          <NavLink to="/login" className="block  lg:inline-block lg:mt-0 text-teal-200 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  rounded no-underline px-3 mr-3">  <span className="fa fa-sign-in me-1"></span>Login</NavLink>
-          <NavLink to="#" className="block lg:inline-block lg:mt-0 text-teal-200 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  rounded no-underline px-3 mr-3">  <span className="fa fa-user me-1"></span>User</NavLink>
-          <NavLink to="/registration" className="block lg:inline-block lg:mt-0 text-teal-200 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  rounded px-3  no-underline mr-3"><span className="fa fa-user-plus me-1"></span>SingUp</NavLink>
-          <NavLink to="#" className="block lg:inline-block lg:mt-0 text-teal-200 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2  rounded px-3  no-underline mr-3"><span className="fa fa-truck me-1"></span>Order</NavLink>
+          <NavLink to="/login" className=" bg-blue-600 hover:bg-blue-900 text-white font-bold py-2  rounded no-underline px-3 mr-3">  <span className="fa fa-sign-in me-1"></span>Login</NavLink>
+          <NavLink to="#" className="bg-blue-600 hover:bg-blue-900 text-white font-bold py-2  rounded no-underline px-3 mr-3">  <span className="fa fa-user me-1"></span>User</NavLink>
+          <NavLink to="/registration" className=" bg-blue-600 hover:bg-blue-900 text-white font-bold py-2  rounded px-3  no-underline mr-3"><span className="fa fa-user-plus me-1"></span>SingUp</NavLink>
+          <NavLink to="#" className="bg-blue-600 hover:bg-blue-900 text-white font-bold py-2  rounded px-3  no-underline mr-3"><span className="fa fa-truck me-1"></span>Order</NavLink>
           <CartBtn />
           
         </div>
