@@ -4,7 +4,6 @@ import Layout from "../Components/Layout";
 import { collection, getDocs } from "firebase/firestore";
 import fireDB from "../fireConfig";
 // import { fireproducts } from "../products/Fireproducts";
-// import { useEffect } from "react";
 import Details from "./Details";
 
 
@@ -52,26 +51,27 @@ const HomePage = () => {
   return (
     <Layout>
       <div>
-      {selectedProduct && <Details  productDetails={selectedProduct} closeModalProp={()=>closeModal()}/> }
+      {selectedProduct && <Details  productDetails={selectedProduct} closeModalProp={()=>closeModal()} /> }
+     
      
       {products.length > 0 && (
        
-        <div>
+        <div className="">
           <div className="container flex justify-center">
           <form action=" " className="mt-4">
             <input className="border border-4  mr-4 mb-2 p-2 w-96 border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" type="text" placeholder="search items" />
             <input className="border border-4 p-2 w-96 border border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"  type="text" placeholder="All" />
           </form>
           </div>
-          <ul className="grid grid-cols-4 ">
+          <ul className="grid grid-cols-5 ">
           {products.map(product => (
-            <li key={product.id} onClick={()=>setSelectedProduct(product)} className=" rounded shadow-lg m-2 p-4 hover:bg-pink-400 hover:text-white hover:italic transform motion-safe:hover:scale-95  "> 
+            <li key={product.id} onClick={()=>setSelectedProduct(product)} className=" rounded shadow-lg m-2 p-4 hover:bg-purple-600 hover:text-white hover:italic transform motion-safe:hover:scale-95  "> 
             <div className="text-center">
             <img className="h-auto"  src={product.imageURL} alt="product" /> <hr />
             </div>
             <p className="text-center ">NAME: {product.name} </p> <hr />
             <p className="text-center">PRICE: ${product.price}</p> <hr />
-            {/* <p className="text-center lg:text-base">CATEGORY: {product.category}</p> <hr /> */}
+            {/* <p className="text-center lg:text-base">CATEGORY: {product.id}</p> <hr /> */}
             {/* <p className="text-center lg:text-base ">DESCRIPTION: {product.description}</p> */}
             </li>
           ))}
@@ -84,5 +84,5 @@ const HomePage = () => {
     </Layout>
   );
 };
+export default HomePage
 
-export default HomePage;
