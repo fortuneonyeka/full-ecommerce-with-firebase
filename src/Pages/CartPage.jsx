@@ -3,9 +3,39 @@ import { useSelector } from "react-redux"
 import { useDispatch } from "react-redux"
 import { NavLink } from "react-router-dom"
 import { delItem } from "../Redux/Actions/actions"
+import { doc, getDoc } from "firebase/firestore";
+// import { collection, getDocs } from "firebase/firestore";
+import fireDB from "../fireConfig";
+import { useEffect } from "react"
+import { useState } from "react"
+import { useParams } from "react-router-dom"
 import Layout from "../Components/Layout"
 
+
 const CartPage = () => {
+  const [product, setProduct] = useState([]);
+
+  const params = useParams();
+
+  // const getData = async () => {
+  //   try {
+  //     const productTemp = await getDoc(doc(fireDB, "products",params.productid));
+      
+  //    console.log(productTemp.data());
+  //     setProduct(productTemp.data());
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   getData()
+  // },[])
+
+  
+  // const proDetail = product.filter((x)=>x.id === params.productid)
+  // const productdet = proDetail
+  // // console.log(productdet);
   
     const state = useSelector((state) => state.addItems)
     const dispatch = useDispatch()
