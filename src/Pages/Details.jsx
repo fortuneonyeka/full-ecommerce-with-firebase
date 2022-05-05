@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { addItem, delItem } from "../Redux/Actions/actions"
+import { fireproducts } from "../products/Fireproducts"
 import { doc, getDoc } from "firebase/firestore";
 import fireDB from "../fireConfig";
-import { fireproducts } from "../products/Fireproducts"
 import { useEffect } from "react"
 
 
@@ -13,28 +13,30 @@ import { useEffect } from "react"
 
 
 
+
 const Details = ({productDetails, closeModalProp}) => {
-  // const [product, setProduct] = useState();
+  const [product, setProduct] = useState([]);
+  const params = useParams();
 
-  // const proid = useParams();
-
-  // const getData = async () => {
-  //   try {
-  //     const productTemp = await getDoc(doc(fireDB, "products", proid.productid));
-
-  //     setProduct(productTemp);
-  //   } catch (error) {
-  //     console.log(error);
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   getData()
-  // },[])
-
-  const proid = useParams();
-  const proDetail = fireproducts.filter((x)=>x.id === proid.id)
-  const product = proDetail[0]
+  const getData = async () => {
+      try {
+       const productTemp = await getDoc(doc(fireDB, "products",params.productid));
+        
+        console.log(productTemp.data());
+      setProduct(productTemp.data());
+      } catch (error) {
+        console.log(error);
+       }
+    };
+  
+    useEffect(() => {
+     getData()
+     },[])
+  
+ 
+  
+  const proDetail = fireproducts.filter(x=>x.id === params.name)
+  // const product = proDetail[1]
   console.log(product);
   const dispatch = useDispatch()
 
@@ -55,7 +57,7 @@ const Details = ({productDetails, closeModalProp}) => {
       <div className="p-8 card">
         <div className="flex justify-center items-center mb-4">
         <button onClick={closeModalProp} className="btn btn-outline-danger mr-4 p-2  w-50  font-bold">Close</button>
-       <button onClick={() => handleCart(product)} className="btn btn-outline-primary  w-50 p-2">{cartBtn}</button>
+       <button onClick={() => handleCart(proDetail)} className="btn btn-outline-primary  w-50 p-2">{cartBtn}</button>
         </div>
       
           <div >
