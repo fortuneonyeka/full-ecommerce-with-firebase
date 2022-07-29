@@ -1,8 +1,12 @@
 import React from 'react'
+import Layout from "../Components/Layout"
 
 const Registration = () => {
   return (
-    <div className="w-full max-w-sm flex mx-auto">
+    <Layout >
+      <div className="w-full max-w-sm flex mx-auto my-64">
+
+      
   <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 mt-5">
   <div className="md:flex md:items-center mb-6">
     <div className="md:w-1/3">
@@ -53,6 +57,7 @@ const Registration = () => {
   </div>
 </form>
 </div>
+</Layout>
   )
 }
 

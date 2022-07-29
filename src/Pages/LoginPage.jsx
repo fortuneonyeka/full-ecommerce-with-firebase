@@ -1,8 +1,11 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
+import Layout from "../Components/Layout";
 
 const LoginPage = () => {
   return (
-    <div className="w-full max-w-xs mx-auto">
+    <Layout >
+      <div className="w-full max-w-xs mx-auto w-50 my-64">
       <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
         <div className="mb-4">
           <label
@@ -31,7 +34,7 @@ const LoginPage = () => {
             type="password"
             placeholder="******************"
           />
-          <p className="text-red-500 text-xs italic">Please choose a password.</p>
+          <p className="text-red-500 text-xs italic">Please enter your correct password.</p>
         </div>
         <div className="flex items-center justify-between">
           <button
@@ -40,18 +43,19 @@ const LoginPage = () => {
           >
             Sign In
           </button>
-          <a
+          <NavLink
             className="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
-            href="#"
+            to="#"
           >
             Forgot Password?
-          </a>
+          </NavLink>
         </div>
       </form>
       <p className="text-center text-gray-500 text-xs">
-        &copy;2020 Acme Corp. All rights reserved.
+        &copy;2022 Acme Corp. All rights reserved.
       </p>
-    </div>
+      </div>
+    </Layout>
   );
 };
 
